@@ -1,0 +1,66 @@
+<body>
+
+    <h1>привет</h1>
+
+    <p>Меня зовут Давид.</p>
+
+   <button onclick="like()">
+     Лайк
+</button>
+
+<button onclick="changeColor()">
+    🎨 Сменить цвет
+</button>
+
+<select id="color">
+    <option value="white">Белый</option>
+    <option value="red">Красный</option>
+    <option value="blue">Синий</option>
+    <option value="green">Зелёный</option>
+    <option value="yellow">Жёлтый</option>
+</select>
+
+<button onclick="changeColor()">
+    Выбрать цвет
+</button>
+
+<p id="likes">Лайков: 0</p>
+
+    
+       <script>
+   let likes = 0;
+
+function like()
+{
+    likes = likes + 1;
+
+    document.getElementById("likes").innerHTML =
+    "Лайков: " + likes;
+}
+
+function changeColor()
+{
+    let colors = [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "purple",
+        "orange",
+        "pink"
+    ];
+
+    let random = Math.floor(Math.random() * colors.length);
+
+    document.body.style.backgroundColor = colors[random];
+}
+
+function changeColor()
+{
+    let color = document.getElementById("color").value;
+
+    document.body.style.backgroundColor = color;
+}
+</script>
+
+</body>
