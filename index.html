@@ -1,66 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Первый сайт Давида</title>
+</head>
 <body>
 
-    <h1>привет</h1>
+    <h1>🏀 Добро пожаловать на мой сайт!</h1>
 
-    <p>Меня зовут Давид.</p>
+    <p>Привет! Меня зовут Давид.</p>
 
-   <button onclick="like()">
-     Лайк
-</button>
+    <h2>👤 Обо мне</h2>
 
-<button onclick="changeColor()">
-    🎨 Сменить цвет
-</button>
+    <p>
+        Я люблю спорт, программирование и создавать игры.
+        Сейчас изучаю создание сайтов и JavaScript.
+    </p>
 
-<select id="color">
-    <option value="white">Белый</option>
-    <option value="red">Красный</option>
-    <option value="blue">Синий</option>
-    <option value="green">Зелёный</option>
-    <option value="yellow">Жёлтый</option>
-</select>
+    <h2>📞 Мои ссылки</h2>
 
-<button onclick="changeColor()">
-    Выбрать цвет
-</button>
+    <p>
+        <a href="https://github.com/davidmambetov577-coder" target="_blank">
+            🔗 Мой GitHub
+        </a>
+    </p>
+<h2>🏀 Моё любимое аниме</h2>
 
-<p id="likes">Лайков: 0</p>
+<img src="./midorima.jpg" width="300" alt="Мидорима">
 
-    
-       <script>
-   let likes = 0;
+<br><br>
 
-function like()
-{
-    likes = likes + 1;
+<video width="300" controls>
+    <source src="Kuroko.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+</video>
 
-    document.getElementById("likes").innerHTML =
-    "Лайков: " + likes;
-}
 
-function changeColor()
-{
-    let colors = [
-        "red",
-        "blue",
-        "green",
-        "yellow",
-        "purple",
-        "orange",
-        "pink"
-    ];
+<p>Мне нравится баскетбол и аниме.</p>
 
-    let random = Math.floor(Math.random() * colors.length);
+    <button onclick="changeTheme()">
+        🌙 Сменить тему
+    </button>
 
-    document.body.style.backgroundColor = colors[random];
-}
-
-function changeColor()
-{
-    let color = document.getElementById("color").value;
-
-    document.body.style.backgroundColor = color;
-}
-</script>
+    <script>
+        function changeTheme()
+        {
+            if (document.body.style.backgroundColor == "black")
+            {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+            }
+            else
+            {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+            }
+        }
+    </script>
 
 </body>
+</html>
