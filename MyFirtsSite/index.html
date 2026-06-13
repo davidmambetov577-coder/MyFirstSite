@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Первый сайт Давида</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="#about">👤 Обо мне</a>
+    <a href="#links">📞 Ссылки</a>
+    <a href="#anime">🏀 Аниме</a>
+</nav>
+
+<h1>🏀 Добро пожаловать на мой сайт!</h1>
+
+<p>Привет! Меня зовут Давид.</p>
+
+<h2 id="about">👤 Обо мне</h2>
+
+<p>
+    Я люблю спорт, программирование и создавать игры.
+    Сейчас изучаю создание сайтов и JavaScript.
+</p>
+
+<h2 id="links">📞 Мои ссылки</h2>
+
+<p>
+    <a href="https://github.com/davidmambetov577-coder" target="_blank">
+        🔗 Мой GitHub
+    </a>
+</p>
+
+<h2 id="anime">🏀 Моё любимое аниме</h2>
+
+<img src="midorima.jpg" width="300" alt="Мидорима">
+
+<br><br>
+
+<video width="300" controls>
+    <source src="Kuroko.mp4" type="video/mp4">
+</video>
+
+<p>Мне нравится баскетбол и аниме.</p>
+
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<br>
+
+<button id="musicBtn" onclick="toggleMusic()">
+🎵 Музыка
+</button>
+
+<button onclick="changeTheme()">
+🌙 Сменить тему
+</button>
+
+<script>
+
+function toggleMusic() {
+
+    let music = document.getElementById("music");
+    let btn = document.getElementById("musicBtn");
+
+    if (music.paused) {
+        music.play();
+        btn.innerHTML = "⏸️ Пауза";
+    }
+    else {
+        music.pause();
+        btn.innerHTML = "🎵 Музыка";
+    }
+}
+
+function changeTheme() {
+
+    if (document.body.style.backgroundColor == "black") {
+
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+
+    }
+    else {
+
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+
+    }
+}
+
+</script>
+
+</body>
+
+</html>
