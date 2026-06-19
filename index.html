@@ -36,7 +36,7 @@
 
 <h2 id="anime">🏀 Моё любимое аниме</h2>
 
-<img src="midorima.jpg" width="300" alt="Мидорима">
+<img id="animeImg" src="midorima.jpg" width="300" alt="Персонаж">
 
 <br><br>
 
@@ -57,7 +57,7 @@
 </button>
 
 <button onclick="changeTheme()">
-🌙 Сменить тему
+🏀 Сменить персонажа
 </button>
 
 <script>
@@ -77,19 +77,47 @@ function toggleMusic() {
     }
 }
 
+let isMidorima = true;
+
 function changeTheme() {
 
-    if (document.body.style.backgroundColor == "black") {
+    let img = document.getElementById("animeImg");
+    let nav = document.querySelector("nav");
+    let buttons = document.querySelectorAll("button");
 
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "black";
+    if (isMidorima) {
 
+        img.src = "chibi mura.jpeg";
+
+        document.body.style.background =
+        "linear-gradient(-45deg,#5a2d82,#8e44ad,#c678dd,#f3a6ff,#8e44ad,#5a2d82)";
+        document.body.style.backgroundSize = "500% 500%";
+        document.body.style.animation = "gradient 8s ease infinite";
+
+        nav.style.background = "#5a2d82";
+
+        buttons.forEach(button=>{
+            button.style.background="#8e44ad";
+        });
+
+        isMidorima = false;
     }
     else {
 
-        document.body.style.backgroundColor = "black";
-        document.body.style.color = "white";
+        img.src = "midorima.jpg";
 
+        document.body.style.background =
+        "linear-gradient(-45deg,#0b3d0b,#1faa00,#66ff33,#a8ff60,#1faa00,#0b3d0b)";
+        document.body.style.backgroundSize = "500% 500%";
+        document.body.style.animation = "gradient 8s ease infinite";
+
+        nav.style.background = "#0b3d0b";
+
+        buttons.forEach(button=>{
+            button.style.background="#1faa00";
+        });
+
+        isMidorima = true;
     }
 }
 
