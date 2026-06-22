@@ -1,119 +1,124 @@
 body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 20px;
 
-    background: linear-gradient(
-        -45deg,
-        #0b3d0b,
-        #1faa00,
-        #66ff33,
-        #a8ff60,
-        #1faa00,
-        #0b3d0b
-    );
+```
+background: linear-gradient(
+    -45deg,
+    #0b3d0b,
+    #1faa00,
+    #66ff33,
+    #a8ff60,
+    #1faa00,
+    #0b3d0b
+);
 
-    background-size: 500% 500%;
-    animation: gradient 8s ease infinite;
+background-size: 500% 500%;
+animation: gradient 8s ease infinite;
+```
+
 }
 
 @keyframes gradient{
-    0%{
-        background-position: 0% 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0% 50%;
-    }
+0%{
+background-position: 0% 50%;
+}
+50%{
+background-position: 100% 50%;
+}
+100%{
+background-position: 0% 50%;
+}
 }
 
 nav{
-    background: #0b3d0b;
-    padding: 15px;
-    text-align: center;
-    border-radius: 10px;
+background: #0b3d0b;
+padding: 15px;
+text-align: center;
+border-radius: 15px;
 }
 
 nav a{
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    font-size: 18px;
+color: white;
+text-decoration: none;
+margin: 10px;
+font-size: 18px;
 }
 
 nav a:hover{
-    color: #a8ff60;
+opacity: 0.8;
 }
 
 h1,h2{
-    color: white;
-    text-shadow: 2px 2px 5px black;
+color: white;
+text-shadow: 2px 2px 5px black;
 }
 
 p{
-    color: white;
+color: white;
 }
 
 a{
-    color: #ccff99;
+color: #ccff99;
 }
 
 img{
-    width: 100%;
-    max-width: 300px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px black;
+width: 100%;
+max-width: 350px;
+border-radius: 15px;
+box-shadow: 0 0 15px black;
 }
 
 video{
-    width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px black;
+width: 100%;
+max-width: 450px;
+border-radius: 15px;
+box-shadow: 0 0 15px black;
 }
 
 button{
-    padding: 10px 20px;
-    margin: 10px 5px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
+padding: 10px 20px;
+margin: 10px 5px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+font-size: 16px;
 
-    background: #1faa00;
-    color: white;
+```
+background: #1faa00;
+color: white;
+```
+
 }
 
 button:hover{
-    background: #66ff33;
+transform: scale(1.05);
 }
 
 @media (max-width: 600px){
 
-    body{
-        padding: 10px;
-    }
+```
+body{
+    padding: 10px;
+}
 
-    h1{
-        font-size: 30px;
-    }
+nav a{
+    display: block;
+    margin: 10px 0;
+}
 
-    h2{
-        font-size: 24px;
-    }
+button{
+    width: 100%;
+}
 
-    p{
-        font-size: 18px;
-    }
+img{
+    max-width: 100%;
+}
 
-    nav a{
-        display: block;
-        margin: 10px 0;
-    }
+video{
+    max-width: 100%;
+}
+```
 
-    button{
-        width: 100%;
-    }
 }
