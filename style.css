@@ -3,20 +3,18 @@ font-family: Arial, sans-serif;
 margin: 0;
 padding: 20px;
 
-```
 background: linear-gradient(
     -45deg,
     #0b3d0b,
     #1faa00,
     #66ff33,
-    #a8ff60,
+    #a8ff60,    
     #1faa00,
     #0b3d0b
 );
 
 background-size: 500% 500%;
 animation: gradient 8s ease infinite;
-```
 
 }
 
@@ -85,10 +83,10 @@ border-radius: 10px;
 cursor: pointer;
 font-size: 16px;
 
-```
+
 background: #1faa00;
 color: white;
-```
+
 
 }
 
@@ -98,7 +96,7 @@ transform: scale(1.05);
 
 @media (max-width: 600px){
 
-```
+
 body{
     padding: 10px;
 }
@@ -119,6 +117,4 @@ img{
 video{
     max-width: 100%;
 }
-```
-
 }
